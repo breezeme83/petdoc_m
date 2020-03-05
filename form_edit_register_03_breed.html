@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>등록 | PETDOC – 내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Seach Engine Optimization -->
+    <meta name="google" value="notranslate">
+    <meta name="author" content="펫닥">
+    <meta name="description" content="내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼">
+    <meta name="keywords" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="내 손안의 수의사 소환 | PETDOC">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.petdoc-korea.com/">
+    <meta property="og:description" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+    <meta property="og:image" content="PETDOC_LOGO.png">
+
+    <link rel="stylesheet" type="text/css" href="css/customeal/style.css">
+    <!-- jQuery -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/live.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="customeal">
+                <div class="step-form-box" id="edit_register">
+                    <div class="top-block">
+                        <a href="#" class="btn-close"></a>
+                        <h2>반려동물 기초정보</h2>
+                    </div>
+                    <div class="middle-block">
+                        <form id="breed" name="breed" target="_top" action="" method="POST">
+                            <legend class="blind">name</legend>
+                            <!--반려동물품종-->
+                            <div class="input-breed-block">
+                                <b class="txt-quiry">하나는 어떤 반려동물인가요?</b>
+                                <ul class="wrap-radio-label circle-type">
+                                    <li>
+                                        <div class="radio-label">
+                                            <label>
+                                                <input type="radio" name="breed" class="select-breed" value="known" />
+                                                <span class="radio-circle">
+                                                    <span class="circle"></span>
+                                                </span>
+                                                <span class="radio-subcmt">
+                                                    <p class="cmt">품종을 알아요</p>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="radio-label">
+                                            <label>
+                                                <input type="radio" name="breed" class="select-breed not"
+                                                    value="unknown" />
+                                                <span class="radio-circle">
+                                                    <span class="circle"></span>
+                                                </span>
+                                                <span class="radio-subcmt">
+                                                    <p class="cmt">잘 모르겠어요</p>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <span class="wrap-txt-input">
+                                    <input class="input-name breed" type="text" placeholder="품종을 검색해 주세요">
+                                    <button class="clear-input" type="button">내용 삭제</button>
+                                </span>
+                                <ul class="breedtype-list v-list">
+                                    <!--JASON_DATA-->
+                                    <li data-type="강아지">강아지</li>
+                                    <li data-type="고양이">고양이</li>
+                                    <li data-type="패럿">패럿</li>
+                                    <li data-type="거북이">거북이</li>
+                                    <li data-type="토끼" class="active">토끼</li>
+                                    <li data-type="닭">닭</li>
+                                    <li data-type="이구아나">이구아나</li>
+                                    <li data-type="토끼" class="active">토끼</li>
+                                    <li data-type="닭">닭</li>
+                                    <li data-type="이구아나">이구아나</li>
+                                    <li data-type="패럿">패럿</li>
+                                    <li data-type="거북이">거북이</li>
+                                    <li data-type="거북이">거북이</li>
+                                    <!-- <li data-type="no-results" class="no-results">검색결과가 없습니다.</li> -->
+                                </ul>
+                            </div>
+                            <div class="wrap-btn-global btn-red">
+                                <input type="submit" title="name" alt="반려동물품종제출" value="다음" class="btn-global" id="">
+                            </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!--totop--><a class="btn-totop" href="#">위로</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>커스터밀 | PETDOC – 내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Seach Engine Optimization -->
+    <meta name="google" value="notranslate">
+    <meta name="author" content="펫닥">
+    <meta name="description" content="내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼">
+    <meta name="keywords" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="내 손안의 수의사 소환 | PETDOC">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.petdoc-korea.com/">
+    <meta property="og:description" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+    <meta property="og:image" content="PETDOC_LOGO.png">
+
+    <link rel="stylesheet" type="text/css" href="css/customeal/style.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <!-- jQuery -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/petCycle.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/live.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="customeal">
+                <div class="result-box">
+                    <!--레이어 팝업-->
+                    <div class="ly-pop" style="display:none;">
+                        <div class="ly-pop-con">
+                            <div class="middle">
+                                <h3>반려동물 삭제</h3>
+                                <p class="cmt">나의 반려동물 기록이 모두 삭제되며, 복구가<br />
+                                    불가능합니다. 정말 삭제하시겠습니까?</p>
+                            </div>
+                            <div class="bottom">
+                                <p class="wrap-btn"><a href="#"
+                                        onClick="(function(){ $('.ly-pop').fadeOut(); return false; })();return false;">닫기</a><a
+                                        href="#">맞춤식 진단결과</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--풀팝업-->
+                    <div class="full-pop" style="display:none">
+                        <div class="inner-pop">
+                            <div class="pop-top"><a href="#"
+                                    onClick="(function(){ $('.full-pop').fadeOut(); return false; })();return false;"
+                                    class="btn-close"></a>
+                                <h3>성분 상세보기</h3>
+                            </div>
+                            <div class="pop-cont">
+                                <h3 class="txt-tit">전성분</h3>
+                                <div class="txt-dsc">
+                                    렌틸 섬유질, 병아리 콩, 호랑이 콩, 대구 간 (냉동건조), 신선한 호박, 신선한 버터넛 스쿼시, 신선한 주키니, 신선한 파스닙,
+                                    신선한 당근, 신선한 레드 딜리셔스 사과, 신선한 바틀릿 배, 신선한 녹색 케일, 신선한 시금치, 신선한 비트그린, 신선한 순무잎, 갈색
+                                    켈프, 신선한 크랜베리, 신선한 블루베리, 신선한 사스카툰 베리, 치커리 뿌리, 강황 뿌리, 밀크 시슬, 우엉 뿌리, 라벤더, 마시멜로
+                                    뿌리, 로즈힙.
+                                </div>
+                                <h3 class="txt-tit">성분 분석표</h3>
+                                <table class="table-1">
+                                    <tr>
+                                        <th>렌틸 섬유질</th>
+                                        <td>42%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>병아리 콩</th>
+                                        <td>42%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>조 단백질</th>
+                                        <td>42%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>대구 간</th>
+                                        <td>42%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-block">
+                        <a href="#" class="btn-back"></a>
+                        <h2>맞춤식 진단 결과</h2>
+                        <a href="#" class="btn-menu"></a>
+                    </div>
+                    <div class="middle-block">
+                        <div class="summary-block">
+                            <div class="wrap-profile-img"><img src="img/customeal/diagnosis-img-profile-pet.svg" alt=""></div>
+                            <div>
+                                <p class="txt-tit"><b>하나</b> 진단결과 키워드</p>
+                                <p class="txt-hash"><span>#성년기</span><span>#비만</span><span>#결석&신장</span></p>
+                                <a class="btn-round" href="#">수정</a>
+                                <!--툴팁-->
+                                <div class="tooltip">
+                                    <div class="con"><span class="tri"></span>
+                                        내 반려동물의 상태나 정보가</br>변경되었을 경우 수정해주세요.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-tab">
+                            <a href="#" data-toggle-index="1" class="active"><span>주식 사료</span></a>
+                            <a href="#" data-toggle-index="2"><span>보조 영양제</span></a>
+                        </div>
+                        <div class="tab-toggle-block">
+                            <!--주식사료-->
+                            <div class="tab1-block toggle">
+                                <div class="column">
+                                    <div class="wrap-pd-name">
+                                        <h2 class="pd-name">커스터밀 연어&참치</h2>
+                                        <p><span>일일 권장 급여량 </span><span class="line">선</span><b>150g</b></p>
+                                    </div>
+                                    <div class="wrap-pd-img">
+                                        <p class="pd-img">
+                                            <img src="img/customeal/diagnosis-result-img-salmon-tuna@3x.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">사료의 성분</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p>하나가 좋아하는 닭고기를 주재료로 한 단일 육류의 반습식 사료를 추천 드립니다.</p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p> 커스터밀 주식 사료는 곡물 성분을 첨가하지 않았으며 원료의 종류를 최소화하여 식이성 알러지를 예방할 수 있습니다.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="wrap-ingredients-img">
+                                            <p class="pd-img">
+                                                <img src="img/customeal/diagnosis-result-img-mealphoto@3x.png" alt="">
+                                            </p>
+                                            <a href="#"
+                                                onClick="(function(){ $('.ly-pop').fadeIn(); return false; })();return false;">성분
+                                                상세보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">하루 권장 칼로리</h3>
+                                    <div class="txt-dsc">
+                                        하나의 연령주기와 몸무게를 고려하였을 때 하루 필요 칼로리는 500kcal 입니다.
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">연령주기</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p>하나는 3세 1개월로 연령주기는 성년기 입니다.</p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p>성년기 반려동물의 경우 적정 체중을 일정하게 유지하는 것이 중요합니다.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="cycle" id="cycle_age">
+                                            <div class="user-pet-age">
+                                                <span class="months">11</span><span class="user-pet-level">성년기</span>
+                                            </div>
+                                            <div class="pet-group">
+                                                <div class="pet-position">
+                                                    <div class="pet-img"><img src="img/customeal/mypet.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="level-group">
+
+                                                <div class="level"> <i></i></div>
+                                                <div class="level"> <i></i></div>
+                                                <div class="level"> <i></i></div>
+                                                <div class="cycle-bar"><i></i></div>
+
+                                                <div class="level-text-group">
+                                                    <span>성장기<br/><i><b class="level1"></b>개월 이하</i></span>
+                                                    <span>청년기<br/><i><b class="level1"></b>개월 - <b
+                                                                class="level2"></b>개월</i></span>
+                                                    <span>노년기<br/><i><b class="level3"></b>개월 이상</i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">몸무게</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p>하나의 품종은 포메라니안으로 소형견 입니다.</p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p>하나의 몸무게는 7kg으로 성년기 포메라니안 표준 몸무게를 기준으로 보았을 때 표준입니다. 계속해서 정상체중을 유지할 수
+                                                    있도록
+                                                    하루권장량을 지켜서
+                                                    급여해주세요.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="cycle" id="cycle_weight">
+                                            <div class="user-pet-age">
+                                                <span class="months"></span><span class="user-pet-level">성년기</span>
+                                            </div>
+                                            <div class="pet-group">
+                                                <div class="pet-position">
+                                                    <div class="pet-img"><img src="img/customeal/mypet.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="level-group">
+
+                                                <div class="level"> <i></i></div>
+                                                <div class="level"> <i></i></div>
+                                                <div class="level"> <i></i></div>
+                                                <div class="cycle-bar"><i></i></div>
+
+                                                <div class="level-text-group">
+                                                    <span>외소<br /><i><b class="level1"></b>kg 이하</i></span>
+                                                    <span>표준<br /><i><b class="level1"></b>kg - <b
+                                                                class="level2"></b>kg</i></span>
+                                                    <span>비만<br /><i><b class="level3"></b>kg 이상</i></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <p class="i-box">
+                                            * 위의 표준체중 범위는 성년기 기준입니다.<br />
+                                            * 같은 품종이라도 반려동물마다 각자 골격이 달라서 표준 체중이 다를 수 있습니다. 표준 몸무게는 참조만 해주세요.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">특수 상황</h3>
+                                    <p class="txt-dsc">
+                                        하나는 임신 5주 상태로 충분한 영양 공급이 이루어 져야 합니다. 6주 이상의 임신 후기에는 사료의 급여량 도 늘려야 하니 권장 급여량을
+                                        참고하여 급여
+                                        해주세요.
+                                    </p>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">급여 가이드</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p>심바의 1일 권장 급여량 150g을 1일 2회로 나누어 급여해주세요.</p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p>동봉되어 있는 계량컵을 사용하여 사료량을 측정하여 급여해주시면 됩니다.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">가격</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p>주식 사료 100g당 0,000원</p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p>보조 영양제 7g당 0,000원</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="i-box">
+                                        * 내 반려동물의 1일 권장 급여량과 급여 기간에 따라서 가격이 다르게 책정됩니다.<br/>
+                                        * 커스터밀 맞춤식은 일반적인 건강관리 및 예방차원의 보다 전문적인 식단을 제공하고 있으나, 질병을 직접적으로 치료하는 식단은 아님으로 질병 치료식은 가까운 동물병원에 문의하시길 권장합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--보조사료-->
+                            <div class="tab2-block toggle hidden">
+                                <div class="column">
+                                    <div class="wrap-pd-img">
+                                        <!-- Swiper -->
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <!--사료에맞는 클래스추가로 리스트컬러변경  c-fat:비만컬러|c-digest:소화컬러|c-skin:피모컬러|c-kidney:신장컬러|c-immune:면역컬러|c-joint:관절컬러|c-multi:멀티컬러-->
+                                                    <div class="wrap-pd-name  c-fat">
+                                                        <h2 class="pd-name">커스터밀 연어&참치</h2>
+                                                        <p><span>일일 권장 급여량 </span><span class="line">선</span><b>2파우치
+                                                                (175g)</b></p>
+                                                    </div>
+                                                    <img src="img/customeal/diagnosis-result-img-weight@3x.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="wrap-pd-name  c-joint">
+                                                        <h2 class="pd-name">커스터밀 연어&참치</h2>
+                                                        <p><span>일일 권장 급여량 </span><span class="line">선</span><b>2파우치
+                                                                (175g)</b></p>
+                                                    </div>
+                                                    <img src="img/customeal/diagnosis-result-img-weight@3x.png" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- If we need navigation buttons -->
+                                        </div>
+                                        <!-- If we need pagination -->
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">유의할 질병</h3>
+                                    <div class="txt-dsc">
+                                        <ul class="dot-list">
+                                            <li><span>dot</span>
+                                                <p> 심바는 현재 관절,면역 관련 질환이 걱정됨으로 이를 완화, 개선하는데 도움을 주는 보조 영양제를 추천 드립니 다.
+                                                </p>
+                                            </li>
+                                            <li><span>dot</span>
+                                                <p>심바의 품종은 스코티쉬 스트레이트로 관절질환, 심장질 환, 비만 관련 질병에 취약함으로 미리 예방하셔야 합니다.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <!--사료에맞는 클래스추가로 리스트컬러변겨  c-fat:비만컬러|c-digest:소화컬러|c-skin:피모컬러|c-kidney:신장컬러|c-immune:면역컬러|c-joint:관절컬러|c-multi:멀티컬러-->
+                                    <div class="c-fat">
+                                        <h3 class="txt-tit">영양겔에 포함된 영양소</h3>
+                                        <div class="txt-dsc">
+                                            <div class="wrap-icon-img">
+                                                <p class="pd-img">
+                                                    <img src="img/customeal/diagnosis-btn-img-fat.svg" alt="">
+                                                </p>
+                                                <h4 class="pd-name">커스터밀 플러스 <b>비만</b></h4>
+                                                <a href="#"
+                                                    onClick="(function(){ $('.full-pop').fadeIn(); return false; })();return false;">성분
+                                                    상세보기</a>
+                                            </div>
+                                            <ul class="dot-list pd">
+                                                <li><span>dot</span>
+                                                    <p>불포화 지방산
+                                                        <i class="txt-dsc">불포화 지방산 불포화 지방산</i>
+                                                    </p>
+                                                </li>
+                                                <li><span>dot</span>
+                                                    <p>식물성 콜라겐
+                                                        <i class="txt-dsc">동물성 콜라겐에 비해 알러지 유발이 낮으며 피부 건강에 도움을 줍니다.</i>
+                                                    </p>
+                                                </li>
+                                                <li><span>dot</span>
+                                                    <p>로즈마리 추출물
+                                                        <i class="txt-dsc">콜라겐 분해효소를 억제하며 콜라겐 합성을 촉진하여 피부 건강에 도움을
+                                                            줍니다.</i>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--사료에맞는 클래스추가로 리스트컬러변겨  c-fat:비만컬러|c-digest:소화컬러|c-skin:피모컬러|c-kidney:신장컬러|c-immune:면역컬러|c-joint:관절컬러|c-multi:멀티컬러-->
+                                    <div class="c-joint">
+                                        <div class="txt-dsc">
+                                            <div class="wrap-icon-img">
+                                                <p class="pd-img">
+                                                    <img src="img/customeal/diagnosis-btn-img-joint.svg" alt="">
+                                                </p>
+                                                <h4 class="pd-name">커스터밀 플러스 <b>관절</b></h4>
+                                                <a href="#">성분 상세보기</a>
+                                            </div>
+                                            <ul class="dot-list pd">
+                                                <li><span>dot</span>
+                                                    <p>불포화 지방산
+                                                        <i class="txt-dsc">불포화 지방산 불포화 지방산</i>
+                                                    </p>
+                                                </li>
+                                                <li><span>dot</span>
+                                                    <p>식물성 콜라겐
+                                                        <i class="txt-dsc">동물성 콜라겐에 비해 알러지 유발이 낮으며 피부 건강에 도움을 줍니다.</i>
+                                                    </p>
+                                                </li>
+                                                <li><span>dot</span>
+                                                    <p>로즈마리 추출물
+                                                        <i class="txt-dsc">콜라겐 분해효소를 억제하며 콜라겐 합성을 촉진하여 피부 건강에 도움을
+                                                            줍니다.</i>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">급여 가이드</h3>
+                                    <p class="txt-dsc">
+                                        주식사료에 영양제를 섞어서 급여해주세요. 기호성도 높아서 사료를 잘 먹지 않는 아이들도 좋아할 거예요.
+                                    </p>
+                                </div>
+                                <div class="column">
+                                    <h3 class="txt-tit">가격</h3>
+                                    <ul class="dot-list price">
+                                        <li><span>dot</span>
+                                            <p>주식 사료 100g당 0,000원.</p>
+                                        </li>
+                                        <li><span>dot</span>
+                                            <p>보조 영양제 7g당 0,000원</p>
+                                        </li>
+                                    </ul>
+                                    <p class="i-box">
+                                        * 내 반려동물의 1일 권장 급여량과 급여 기간에 따라서 가격이 다르게 책정됩니다.<br />
+                                        * 커스터밀 맞춤식은 일반적인 건강관리 및 예방차원의 보다 전문적인 식단을 제공하고 있으나, 질병을 직접적으로 치료하는 식단은 아님으로 질병
+                                        치료식은
+                                        가까운 동물병원에 문의하시길 권장합니다. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-btn-global btn-red">
+                            <button class="btn-global active last-form">맞춤식 구매하기</button>
+                        </div>
+                    </div>
+                </div>
+                <!--totop--><a class="btn-totop" href="#">위로</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

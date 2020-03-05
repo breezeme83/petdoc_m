@@ -1,0 +1,37 @@
+[
+    {
+        "name": "healthy",
+        "text": "튼튼해요",
+        "img":"img/customeal/sp-multi.svg"
+    },
+    {
+        "name": "joint",
+        "text": "관절",
+        "img":"img/customeal/sp-joint.svg"
+    },
+    {
+        "name": "skin",
+        "text": "피모",
+        "img":"img/customeal/sp-skin.svg"
+    },
+    {
+        "name": "digestive",
+        "text": "소화",
+        "img":"img/customeal/sp-digest.svg"
+    },
+    {
+        "name": "immune",
+        "text": "면역",
+        "img":"img/customeal/sp-immune.svg"
+    },
+    {
+        "name": "kidney",
+        "text": "결석&신장",
+        "img":"img/customeal/sp-kidney.svg"
+    },
+    {
+        "name": "fat",
+        "text": "비만",
+        "img":"img/customeal/sp-fat.svg"
+    }
+]

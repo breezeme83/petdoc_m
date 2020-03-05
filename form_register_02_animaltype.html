@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>등록 | PETDOC – 내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Seach Engine Optimization -->
+    <meta name="google" value="notranslate">
+    <meta name="author" content="펫닥">
+    <meta name="description" content="내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼">
+    <meta name="keywords" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="내 손안의 수의사 소환 | PETDOC">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.petdoc-korea.com/">
+    <meta property="og:description" content="수의사, 펫닥, 커스터밀, 반려동물, 맞춤식">
+    <meta property="og:image" content="PETDOC_LOGO.png">
+
+    <link rel="stylesheet" type="text/css" href="css/customeal/style.css">
+    <!-- jQuery -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/live.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="customeal">
+                <div class="step-form-box" id="register">
+                    <div class="top-block">
+                        <span class="btn-back"></span>
+                        <h2>반려동물 등록</h2>
+                    </div>
+                    <div class="middle-block">
+                        <!--진행바-->
+                        <div class="progress-status">
+                            <span class="progress-status-bar r-2-6"></span>
+                        </div>
+                        <form id="animaltype" name="animaltype" target="_top" action="" method="POST">
+                            <!--서버로 전송할 동물타입 인풋 값-->
+                            <input type="hidden" name="animaltype-hidden" id="value-hidden" value="">
+                            <fieldset class="animaltype-form">
+                                <legend class="blind">name</legend>
+                                <!--반려동물이름-->
+                                <div class="input-animaltype-block">
+                                    <b class="txt-quiry">하나는 어떤 반려동물인가요?</b>
+                                    <!--타입 리스트-->
+                                    <ul class="animaltype-list check-type v-list activeToggle">
+                                        <!--JASON_DATA-->
+                                    </ul>
+                                </div>
+                                <div class="wrap-btn-global btn-red">
+                                    <input type="submit" title="name" alt="반려동물이름제출" value="다음" class="btn-global"
+                                        id="">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!--totop--><a class="btn-totop" href="#">위로</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

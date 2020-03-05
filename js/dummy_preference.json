@@ -1,0 +1,35 @@
+[
+    {
+        "name": "chicken",
+        "text": "닭고기",
+        "img":"img/customeal/sp-chicken.svg"
+    },
+    {
+        "name": "chicken",
+        "text": "오리고기",
+        "img":"img/customeal/sp-duck.svg"
+    },
+    {
+        "name": "beef",
+        "text": "소고기",
+        "img":"img/customeal/sp-beef.svg"
+    },
+    {
+        "name": "salmon",
+        "text": "연어&참치",
+        "img":"img/customeal/sp-none.svg",
+        "disabled": true
+    },
+    {
+        "name": "lamb",
+        "text": "양고기",
+        "img":"img/customeal/sp-none.svg",
+        "disabled": true
+    },
+    {
+        "name": "anyof",
+        "text": "가리지않아요",
+        "img":"img/customeal/sp-multi.svg"
+
+    }
+]
