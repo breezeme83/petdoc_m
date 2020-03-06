@@ -126,7 +126,9 @@ body{margin:0; padding:0;}
 .customeal #condition  .radio-label .circle:before,
 .customeal #edit_condition  .radio-label .circle:before{background-color:#5b678c;} 
 .customeal #condition  .radio-label .radio-subcmt .cmt,
-.customeal #edit_condition  .radio-label .radio-subcmt .cmt{font-size:15px;color:#8e7e78;}
+.customeal #edit_condition  .radio-label .radio-subcmt .cmt{font-size:15px;color:#8e7e78;font-weight:bold;}
+.customeal #condition  .list-type li.on .radio-label .radio-subcmt .cmt,
+.customeal #edit_condition  .list-type li.on .radio-label .radio-subcmt .cmt{color:#4e5263;}
 /*list-type-check*/ 
 .customeal .wrap-radio-label.list-type li{cursor:pointer;border-radius:11px;padding:15px 16px 15px 16px;display:table;width:100%;margin:15px 0}
 .customeal .wrap-radio-label.list-type li.on{border:solid 1px #c886aa}
