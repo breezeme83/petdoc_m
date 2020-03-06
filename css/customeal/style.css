@@ -226,7 +226,7 @@ body{margin:0; padding:0;}
 /*pregnancy*/
 .customeal .input-pregnancy-block .wrap-radio-label{width:86.5%}
 .customeal .input-pregnancy-block .wrap-txt-input{width:86.5%;margin:14px auto 0 auto;}
-.customeal #week_pregnancy{padding-left:15px;background:url(../../img/customeal/customeal-ic-dropdown-open.svg);background-repeat:no-repeat;background-position:95.6% 50%;}
+.customeal #week_pregnancy{display:none;padding-left:15px;background:url(../../img/customeal/customeal-ic-dropdown-open.svg);background-repeat:no-repeat;background-position:95.6% 50%;}
 /*real-time-loading*/
 .customeal .real-time-loading-box{background:#fff7ef;width:100%;height:100%;position:fixed}
 .customeal .real-time-loading-box .title{width:100px;height:71px;margin:40px auto 0 auto;background:url(../../img/customeal/customeal-detail-img-logo.svg);}
