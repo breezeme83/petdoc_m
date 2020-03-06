@@ -80,6 +80,7 @@ body{margin:0; padding:0;}
 .customeal .wrap-btn-global .btn-global.c-r{ background-color: #fff2ee; color: #ff5a5c;border: solid 0.5px rgba(255, 90, 92, 0.25); }
 .customeal .wrap-btn-round{position:fixed;z-index:3;bottom:76px;left:0;width:100%;background:#fff;text-align:center;}
 .customeal .wrap-btn-round .btn-round{ width:82.5%;margin:0 auto;height: 51px; border-radius: 26px; background-color: #ff5a5c; display:block;color:#fff;font-size: 17px;font-weight:bold}
+.customeal #condition .wrap-btn-global .btn-global,.customeal #edit_condition .wrap-btn-global .btn-global{background:#5b678c;color:rgba(255, 255, 255, 0.4);}
 
 /*list-type*/
 .customeal ul.v-list li:first-child{border-top:solid 1px #f8f8f8}
