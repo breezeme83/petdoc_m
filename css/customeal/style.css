@@ -162,7 +162,7 @@ body{margin:0; padding:0;}
 /*register_name*/
 .customeal .picture-block{text-align: center;}
 .customeal .picture-block .wrap-picture{display:block;position:relative;width:102px;margin:29px auto 0 auto;}
-.customeal .picture-block .clip-picture{display:block;width:102px;height:102px;overflow: hidden;margin:0 auto;border-radius: 50%;border:solid 1px #dbdbdb;background-image:url(../../img/customeal/common-profile-pet.svg);background-size:100%;}
+.customeal .picture-block .clip-picture{display:block;width:102px;height:101px;overflow: hidden;margin:0 auto;border-radius: 50%;border:solid 1px #dbdbdb;background-image:url(../../img/customeal/common-img-profile-pet.svg);background-size:100%;background-color:#f0f2f4;}
 .customeal .picture-block .clip-picture img{display:block;width:100%;}
 .customeal .picture-block a.sub-text{display:inline-block;margin-top:12px;font-size: 13px;color:#8d95a0;}
 .customeal .wrap-picture{position:relative;display:block;margin:0 auto;width:102px;height:102px;}
@@ -358,7 +358,7 @@ body{margin:0; padding:0;}
 .customeal .mypet-list.b-t{border-top:solid 1px #f8f8f8}
 .customeal .mypet-list li{display:table;width:100%;border-bottom:solid 1px #f8f8f8;}
 .customeal .mypet-list li .pet-img-block{display:table-cell;min-width:64px;width:64px;padding:15px;vertical-align: top;border-radius: 50%;}
-.customeal .mypet-list li .pet-img-block img{display:block;border-radius: 50%;width:64px;border: solid 1px #dbdbdb;}
+.customeal .mypet-list li .pet-img-block img{display:block;border-radius: 50%;width:64px;border: solid 1px #dbdbdb;background-color:#f0f2f4;}
 .customeal .mypet-list li .pet-info-block{display:table-cell;vertical-align: middle;padding:15px 16px 16px 0;}
 .customeal .mypet-list li .pet-info-block .name{font-size:18px;color:#4e5263}
 .customeal .mypet-list li .pet-info-block .breed{margin-top:2px;}
