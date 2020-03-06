@@ -22,7 +22,7 @@ body{margin:0; padding:0;}
 .customeal body{font-family:"Noto Sans", "Apple SD Gothic Neo", "Malgun Gothic", Dotum;}
 .customeal h2{font-size:16px;color:#4e5263;}
 .customeal input::placeholder { color: #bcc1c8; font-size:15px }
-.customeal input:focus{outline:none;}
+.customeal input:focus,.customeal button:focus{outline:none;}
 /*customeal*/
 .customeal {-webkit-text-size-adjust:none;background:#fff;font-family:"Noto Sans", "Apple SD Gothic Neo", "Malgun Gothic", Dotum;color:#4e5263}
 .customeal .error-msg{display:none;margin:9px 0 0 5px;color:#ff5a5c;font-size:12px;}
