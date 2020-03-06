@@ -365,13 +365,13 @@ body{margin:0; padding:0;}
 .customeal .mypet-list li .pet-info-block .name{font-size:18px;color:#4e5263}
 .customeal .mypet-list li .pet-info-block .breed{margin-top:2px;}
 .customeal .pet-info-block p{font-size: 14px;color:#8d95a0;font-family:SFProText;}
-.customeal .pet-info-block p span{color:#4e5263;margin-left:3px;}
+.customeal .pet-info-block p span{color:#4e5263;margin-left:6px;}
 .customeal .mypet-list li .pet-status a{display:inline-block;padding:6px 15px;margin-top:15px;border-radius: 20px;font-size:14px;font-weight:bold;}
 .customeal .mypet-list li .new-ico{margin-left:3px;color: #88a6ff;font-family: SFProText;font-size: 12px; font-weight: bold;}
 .customeal .mypet-list li a.btn-g-t{background:#f8f8f8;color:#4e5263;}
 .customeal .mypet-list li a.btn-g-b{margin-top:10px;background:#f5f6fd;color:#88a6ff;}
-.customeal .mypet-list li:hover{background-color:#f5f6fd;}
-.customeal .mypet-list li:hover a{background:#ffffff;}
+.customeal .mypet-list li.update a{background:#ffffff;}
+.customeal .mypet-list li.update{background-color:#f5f6fd;}
 .customeal .mypet-list .ongoing{margin:0;font-size:14px;color:#4e5263;}
 .customeal .mypet-list li.no-list{width:100%;text-align:center;position:fixed;top:50%;margin-top:-10px;color:#8d95a0;font-size:15px;border-bottom:none;}
 /*infolist*/
