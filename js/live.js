@@ -153,6 +153,7 @@ $(function () {
     $('.activeToggle li').click(function () {
         $('.activeToggle li').removeClass('active');
         $(this).addClass('active');
+        $('#value-hidden').val($(this).data('type')).trigger('change');
     });
 })
 
