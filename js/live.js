@@ -337,15 +337,14 @@ $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() == 0) {
             } else if ($(this).scrollTop() > 0 && $(this).scrollTop() <= tabOffsetTop) {
-                $('.top-block').show();
-                $('.result-tab').removeClass('fixedtop');
+                
             } else if ($(this).scrollTop() > tabOffsetTop) {
-                $('.top-block').fadeOut();
-                $('.result-tab').addClass('fixedtop');
+                
+                
             }
         });
     }
-
+    
     //동물생애주기&체중분석플러그인
     if ($('#cycle_age').length > 0) {
         var petMonth = 120;
