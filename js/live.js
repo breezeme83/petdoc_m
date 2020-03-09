@@ -333,7 +333,6 @@ $(document).ready(function () {
     if ($('.result-tab').length > 0) {
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
-            console.log(scrollTop);
             if (122 > scrollTop) {
                 $('.top-block').css({'top': '0' });
                 $('.result-tab').removeClass('fixed-top').removeClass('mgn-top');    
