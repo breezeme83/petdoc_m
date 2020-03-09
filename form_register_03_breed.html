@@ -34,7 +34,7 @@
             <div class="customeal">
                 <div class="step-form-box" id="register">
                     <div class="top-block">
-                        <span class="btn-back"></span>
+                        <a href="#" class="btn-back"></a>
                         <h2>반려동물 등록</h2>
                     </div>
                     <div class="middle-block">
@@ -43,6 +43,8 @@
                             <span class="progress-status-bar"></span>
                         </div>
                         <form id="breed" name="breed" target="_top" action="" method="POST">
+                             <!--서버로 전송할 동물타입 인풋 값-->
+                            <input type="hidden" name="breed-hidden" id="value-hidden" class="required-input" value="">
                             <legend class="blind">name</legend>
                             <!--반려동물품종-->
                             <div class="input-breed-block">
@@ -51,7 +53,7 @@
                                     <li>
                                         <div class="radio-label">
                                             <label>
-                                                <input type="radio" name="breed" class="select-breed" value="known" checked="checked"/>
+                                                <input type="radio" name="breed" class="select-breed required-input" value="known" checked="checked"/>
                                                 <span class="radio-circle">
                                                     <span class="circle"></span>
                                                 </span>
@@ -64,7 +66,7 @@
                                     <li>
                                         <div class="radio-label">
                                             <label>
-                                                <input type="radio" name="breed" class="select-breed not"
+                                                <input type="radio" name="breed" class="select-breed not required-input"
                                                     value="unknown" />
                                                 <span class="radio-circle">
                                                     <span class="circle"></span>

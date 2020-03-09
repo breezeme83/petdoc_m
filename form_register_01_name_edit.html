@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <title>커스터밀 | PETDOC – 내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼</title>
+    <title>등록 | PETDOC – 내 손안의 수의사 소환, 반려동물 토탈 케어 플랫폼</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,26 +32,28 @@
     <div class="wrap">
         <div class="container">
             <div class="customeal">
-                <div class="step-form-box" id="edit_condition">
+                <div class="step-form-box" id="edit_register">
                     <div class="top-block">
                         <a href="#" class="btn-close"></a>
-                        <h2>맞춤식 진단 정보</h2>
+                        <h2>반려동물 기초 정보</h2>
                     </div>
                     <div class="middle-block">
-                        <form id="sickness" name="sickness" target="_top" action="" method="POST">
-                            <fieldset class="sickness-form">
-                                <legend class="blind">sickness</legend>
-                                <!--반려동물질병유무-->
-                                <div class="input-sickness-block">
-                                    <b class="txt-quiry-b">하나가 앓고 있거나</br>
-                                        걱정되는 질병이 있다면 알려주세요.</b>
-                                    <i class="txt-dsc">※ 최대 3개 중복 선택 가능</i>
-                                    <ul class="wrap-radio-label thumb sickness-list">
-
-                                    </ul>
+                        <!--진행바-->
+                        <form id="name" name="name" target="_top" action="" method="POST">
+                            <fieldset class="name-form">
+                                <legend class="blind">name</legend>
+                                <!--반려동물이름-->
+                                <div class="input-name-block">
+                                    <b class="txt-quiry">반려동물의 이름을 알려주세요.</b>
+                                    <span class="wrap-txt-input">
+                                        <input class="input-name required-input" type="text" placeholder="이름을 10자 이내로 입력해주세요.">
+                                        <button class="clear-input" type="button">내용 삭제</button>
+                                    </span>
+                                    <p class="error-msg">반려동물의 이름을 입력해 주세요</p>
                                 </div>
-                                <div class="wrap-btn-global btn-blue">
-                                    <input type="submit" title="name" alt="확인" value="확인" class="btn-global" id="">
+                                <div class="wrap-btn-global btn-red">
+                                    <input type="submit" title="name" alt="반려동물이름제출" value="다음" class="btn-global"
+                                        id="">
                                 </div>
                             </fieldset>
                         </form>

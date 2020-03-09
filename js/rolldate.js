@@ -116,7 +116,8 @@
                     cancel: null,
                     minStep: 1,
                     trigger: 'tap',
-                    lang: { title: '날짜선택', cancel: '취소', confirm: '확인', year: '년', month: '월', day: '일', hour: '시', min: '분', sec: '초' }
+                    lang: { title: '날짜선택', cancel: '취소', confirm: '확인', year: '년', month: '월', day: '일', hour: '시', min: '분', sec: '초' },
+                    customClass: ''
                 }
             };
         },
@@ -202,7 +203,8 @@
             var $html = '<div class="rolldate-mask"></div>\n<div class="rolldate-panel">\n<div class="rolldate-content">\n<div class="rolldate-dim mask-top"></div>\n<div class="rolldate-dim mask-bottom"></div>\n<div class="rolldate-wrapper">\n ' + ul + '\n </div>\n</div>\n<div class="bottom-block">\n <span class="rolldate-btn rolldate-confirm">' + lang.confirm + '</span>\n  </div>\n</div>',
             box = document.createElement("div");
   
-            box.className = 'rolldate-container' + (!!navigator.userAgent.match(/MicroMessenger/i) ? ' wx' : '');
+            box.className = 'rolldate-container ' + (config.customClass)
+                 + (!!navigator.userAgent.match(/MicroMessenger/i) ? ' wx' : '');
             box.innerHTML = $html;
             document.body.appendChild(box);
   
@@ -466,7 +468,8 @@
                     minStep: 1,
                     trigger: 'tap',
                     items: [],
-                    lang: { confirm: '확인' }
+                    lang: { confirm: '확인' },
+                    customClass: ''
                 }
             };
         },
@@ -532,7 +535,8 @@
                 </div>`,
                 box = document.createElement("div");
 
-            box.className = 'rolldate-container' + (!!navigator.userAgent.match(/MicroMessenger/i) ? ' wx' : '');
+            box.className = 'rolldate-container ' + config.customClass +
+                (!!navigator.userAgent.match(/MicroMessenger/i) ? ' wx' : '');
             box.innerHTML = $html;
             document.body.appendChild(box);
   

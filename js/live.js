@@ -32,6 +32,7 @@
             url: '',
             hidden: '#value-hidden',
             classSelected: 'active',
+            classInput: 'required-input',
             maxCount: undefined,
             uncheckAllOptionName: 'anyof',
             OnSelectedCountChanged: undefined
@@ -61,7 +62,7 @@
                 <li>
                     <div class="radio-label-thumb ${item.class}">
                         <label>
-                            <input type="checkbox" class="input-checkbox ${isUncheckAllItem ? 'uncheck-all' : ''}" 
+                            <input type="checkbox" class="input-checkbox ${settings.classInput} ${isUncheckAllItem ? 'uncheck-all' : ''}" 
                                 name="${item.name}" value ${item.disabled ? "disabled>" : ">"}
                                 <div class="radio-thumb"
                                     style="background-image:url('${item.img}')">
@@ -160,7 +161,9 @@ $(function () {
 //clear button 
 $(function () {
     $('.clear-input').click(function () {
-        $(this).siblings('input').val('');
+        $(this).siblings('input').val('').trigger('keyup');
+    }).siblings('input').keyup(function(){
+        $(this).siblings('.clear-input').toggle($(this).val().length > 0);
     });
 });
 
@@ -182,11 +185,13 @@ $(function () {
                     $ul.append('<li class="no-results">검색결과가 없습니다.</li>');
                 }
             });
-        })
+            // $(this).siblings('.clear-input').toggle($(this).val().length > 0);
+        }).trigger('keyup')
         .parents('.wrap-txt-input').click(function () {
             if ($(this).children().prop('disabled')) {
                 $('.breed').prop('disabled', false);
-                $('.btn-global').removeClass('active');
+                //$('.btn-global').removeClass('active');
+                $('#value-hidden').val('').trigger('change');
             }
         });
 
@@ -194,33 +199,28 @@ $(function () {
         if ($(this).hasClass('no-results')) {
             return;
         }
+        $('#value-hidden').val($(this).text()).trigger('change');
         $('.select-breed[value="known"]').prop("checked", true);
         $('.breed').val($(this).text()).prop('disabled', true);
-        $('.btn-global').addClass('active');
+        //$('.btn-global').addClass('active');
     });
 
     $('.select-breed').change(function () {
         if ($(this).val() === 'unknown') {
             $('.wrap-txt-input, .breedtype-list').hide();
-            $('.btn-global').addClass('active');
+            //$('.btn-global').addClass('active');
         } else {
             $('.wrap-txt-input, .breedtype-list').show();
             if ($('.breed').prop('disabled') !== true) {
-                $('.btn-global').removeClass('active');
+               // $('.btn-global').removeClass('active');
             }
         }
     });
 
     $('input[type=radio][name=breed]').change(function () {
-        if ($(this).hasClass('not')) {
-            $('.select-breed-block').hide();
-        }
-        else {
-            $('.select-breed-block').show();
-        }
+        $('.select-breed-block').toggle(!$(this).hasClass('not'));
     });
 });
-
 
 //form_condition_06_feed.html
 //form_edit_condition_06_feed.html
@@ -253,28 +253,27 @@ $(document).ready(function () {
     $(function () {
         //폼을 가지고 있는지 체크
         //인풋 형태가 바뀔때마다 이 페이지에 인풋 벨류값이 있는지 체크 
-        $('input').change(function () {
+        $(document).on('change keyup','input.required-input' ,function () {
             var $input = $(this);
             var type = $input.attr('type');
+            var isValid = false;
             if (type === 'radio' || type === 'checkbox') {
-                $('input:checked', 'form').length > 0 ? $('.btn-global').addClass('active') : $('.btn-global').removeClass('active');
+                isValid = $('.required-input:checked').length > 0 && !$('p.error-msg').is(':visible');
             } else if (type === 'text' || type === 'number' || type === 'hidden') {
-                $('input', 'form').val().length > 0 ? $('.btn-global').addClass('active') : $('.btn-global').removeClass('active');
+                isValid = $input.val().length > 0;  
             }
-
+            $('.btn-global').toggleClass('active', isValid);
         });
 
     });
     //form_register_01_name_nonmembers +form_edit_register_01_name_nonmembers
-    $('#pet_name').keyup(function () {
-        if ($(this).val()) {
-            $('#btn_next').addClass('active');
-            $('.error-msg').hide();
-        } else {
-            $('#btn_next').removeClass('active');
-            $('.error-msg').show();
-        }
-    });
+     $('#pet_name').keyup(function () {
+         if ($(this).val()) {
+             $('.error-msg').hide();
+         } else {
+             $('.error-msg').show();
+         }
+     });
 
     //form_condition_02_bodytype.html
     //form_edit_condition_02_bodytype.html
@@ -282,7 +281,6 @@ $(document).ready(function () {
         $('.wrap-radio-label.list-type li').removeClass('on');
         $(this).addClass('on');
     });
-
     //form_condition_03_exercise.html
     //form_edit_condition_03_exercise.html
     //exerciseHours_form
@@ -333,17 +331,29 @@ $(document).ready(function () {
     //result.html/////////////////////////////////////////////////
     //레이아웃변경
     if ($('.result-tab').length > 0) {
-        var tabOffsetTop = $('.result-tab').offset().top;
         $(window).scroll(function () {
-            if ($(this).scrollTop() == 0) {
-            } else if ($(this).scrollTop() > 0 && $(this).scrollTop() <= tabOffsetTop) {
-                
-            } else if ($(this).scrollTop() > tabOffsetTop) {
-                
-                
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+            if (122 > scrollTop) {
+                $('.top-block').css({'top': '0' });
+                $('.result-tab').removeClass('fixed-top').removeClass('mgn-top');    
+            } else if (122 <= scrollTop && 170 > scrollTop) {
+                //$('.result-tab').removeClass('fixed-top'); 
+                $('.top-block').css({'top':( -(scrollTop-122)) });
+                $('.result-tab').removeClass('fixed-top').addClass('mgn-top');
+            } else if (scrollTop > 170) {
+                //$('.result-tab').addClass('fixed-top');
+                $('.top-block').css({'top': '-48px' });
+                $('.result-tab').addClass('fixed-top').addClass('mgn-top');              
             }
         });
     }
+
+    $('body').on('click',function(event){
+        if(!$(event.target).is('.tooltip')){
+          $('.tooltip').hide();
+        }
+     });
     
     //동물생애주기&체중분석플러그인
     if ($('#cycle_age').length > 0) {
@@ -410,16 +420,17 @@ $(function () {
             },
             confirm: function () {
                 $('.btn-global').addClass('active');
-            }
+            },
+            customClass: 'dateclass'
         });
     }
 
     var ageOptions = [];
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 0; i <= 20; i++) {
         ageOptions.push(`${i}세`);
     }
     var monthOptions = [];
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 0; i <= 12; i++) {
         monthOptions.push(`${i}개월`);
     }
     if (window.RollSelect) {
@@ -434,7 +445,8 @@ $(function () {
             },
             confirm: function () {
                 $('.btn-global').addClass('active');
-            }
+            },
+            customClass: 'birthclass'
         });
     }
 
@@ -493,7 +505,7 @@ $(function () {
             $('#week_pregnancy').show();
             week_select.show();
             if (!$('#week_pregnancy').val()) {
-                $('.btn-global').removeClass('active');
+            $('.btn-global').removeClass('active');
             }
         }
     });
@@ -511,6 +523,8 @@ $(function () {
         $('#weight_input').val(value);
         if (value > 0) {
             $('.btn-global').addClass('active');
+        }else if(value == 0){
+            $('.btn-global').removeClass('active');
         }
         //document.querySelector('#values').innerHTML = value;
     }
