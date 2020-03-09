@@ -38,7 +38,6 @@ body{margin:0; padding:0;}
 .customeal .input-name-block .txt-quiry{padding:0;text-indent:0;}
 .customeal .mypet-list-etr .txt-quiry{padding:30px 0;}
 .customeal .input-feed-block b.txt-quiry-b,
-/* .customeal .input-sickness-block b.txt-quiry-b  {padding:30px 0 5px 0 !important;} */
 .customeal .input-weight-block b.txt-quiry-b{padding:40px 0 30px 0}
 .customeal #edit_condition b.txt-quiry-b{padding:30px 0 15px 0;}
 .customeal #edit_condition .input-weight-block b.txt-quiry-b,
@@ -108,9 +107,8 @@ body{margin:0; padding:0;}
 .customeal .wrap-txt-input button.arrow{position:absolute;right:15px;top:24px;width:8px;height:6px;background-image:url(../../img/customeal/common-ic-dropdown-open.svg);background-size:100%;text-indent:-9999px}
 /*circle-type-check*/
 .customeal .wrap-radio-label input[type='checkbox'],.customeal .wrap-radio-label input[type='radio']{height:0;width:0;border:0;line-height:0;float:left;}
-.customeal .wrap-radio-label{/*width:86.5%;*/width:91.111%;/*register*/margin:0 auto;}
+.customeal .wrap-radio-label{width:91.111%;/*register*/margin:0 auto;}
 /* .customeal #condition .wrap-radio-label, */
-/* .customeal #edit_condition .wrap-radio-label{width:86.5%;} */
 .customeal .wrap-radio-label.circle-type{display:table;margin:0 auto;}
 .customeal .wrap-radio-label.circle-type li{float:left;padding-right:24px}
 .customeal .radio-label label{display:table;width:100%;vertical-align:top;}
@@ -213,7 +211,6 @@ body{margin:0; padding:0;}
 .customeal .input-exercise-block p{width:360px;position:relative;text-align: center;padding:30px 0 0 0;margin:0 auto;}
 .customeal .input-exercise-block .txt-sub{position:absolute;top:43px;left:214px;font-size:15px;color:#4e5263;font-weight:bold;}
 /*allergy*/
-/* .customeal .input-allergy-block{padding-bottom:10px;} */
 .customeal .input-allergy-block .txt-dsc{display:block;width:100%;text-align:center;color:#8e7e78;font-size:13px;line-height:20px;font-style:normal}
 /*preference*/ 
 /*feed*/
