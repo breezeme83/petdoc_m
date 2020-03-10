@@ -330,22 +330,38 @@ $(document).ready(function () {
 
     //result.html/////////////////////////////////////////////////
     //레이아웃변경
-    if ($('.result-tab').length > 0) {
+    var lastScrollTop = 0;
+    if ($('.wrap-result-tab').length > 0) {
         $(window).scroll(function () {
-            var scrollTop = $(window).scrollTop();
-            if (122 > scrollTop) {
-                $('.top-block').css({'top': '0' });
-                $('.result-tab').removeClass('fixed-top').removeClass('mgn-top');    
-            } else if (122 <= scrollTop && 170 > scrollTop) {
-                //$('.result-tab').removeClass('fixed-top'); 
-                $('.top-block').css({'top':( -(scrollTop-122)) });
-                $('.result-tab').removeClass('fixed-top').addClass('mgn-top');
-            } else if (scrollTop > 170) {
-                //$('.result-tab').addClass('fixed-top');
-                $('.top-block').css({'top': '-48px' });
-                $('.result-tab').addClass('fixed-top').addClass('mgn-top');              
+            var st = $(this).scrollTop();
+            if(st === lastScrollTop) {
+                return;
             }
+            if (st > lastScrollTop){
+                var scrollTop = $(window).scrollTop();
+                if (122 > scrollTop) {
+                    $('.top-block').css({'top': '0' });
+                    $('.wrap-result-tab').removeClass('fixed-top').removeClass('mgn-top');    
+                } else if (122 <= scrollTop && 170 > scrollTop) {
+                    $('.top-block').css({'top':( -(scrollTop-123)) });
+                    $('.wrap-result-tab').removeClass('fixed-top').addClass('mgn-top');
+                } else if (scrollTop > 170) {
+                    $('.top-block').css({'top': '0' });
+                    $('.wrap-result-tab').addClass('fixed-top').addClass('mgn-top').removeClass('fixed-48');             
+                }
+            } else {
+                var scrollTop = $(window).scrollTop();
+                if (0== scrollTop) { 
+                } else if (122 >= scrollTop) {
+                    $('.wrap-result-tab').removeClass('fixed-48').removeClass('mgn-top');  
+                } else if (scrollTop > 122) {
+                    $('.top-block').animate({'top':0 });
+                    $('.wrap-result-tab').removeClass('fixed-top').addClass('fixed-48');        
+                }
+            }
+            lastScrollTop = st;
         });
+        
     }
 
     $('body').on('click',function(event){
@@ -372,28 +388,42 @@ $(document).ready(function () {
     //탭과탭내슬라이드플러그인
     var currentTab = 1;
     var swiper;
-    $('.result-tab').on('click', 'a', function (event) {
-        var selectedTab = parseInt($(this).attr('data-toggle-index'));
+    var summaryBlockHeight = $('.summary-block').outerHeight() + $('.top-block').outerHeight();
+    var topOtherTap = summaryBlockHeight;
+    $('.result-tab a').on('click', function (event) {
+        var selectedTab = parseInt($(this).attr('data-toggle-index'));     
         $('.result-tab a').removeClass('active');
-        $(this).addClass('active')
+        $(this).addClass('active');
+        
         showBlock(selectedTab);
-
-        if (currentTab === selectedTab) {
-            return;
+        var st = $(window).scrollTop();
+        if(st>122){
+            $(window).scrollTop('170');
         }
+        // if (currentTab === selectedTab) {
+        //     lastScrollTop = 0;
+        //     $(window).scrollTop(summaryBlockHeight);
+        // } else {
+        //     var topCurrentTab = $(window).scrollTop();
+        //     lastScrollTop = 0;
+        //     $(window).scrollTop(topOtherTap > summaryBlockHeight ? topOtherTap : summaryBlockHeight);
+        //     topOtherTap = topCurrentTab;
+        // }
 
-        if (selectedTab === 2) {
+        if (selectedTab === 2 && $('.swiper-container').length > 0) {
             swiper = new Swiper('.swiper-container', {
+                effect: 'fade',
                 pagination: {
                     el: '.swiper-pagination',
                     type: 'bullets'
                 },
             });
-        } else {
+        } else if(swiper) {
             swiper.destroy();
         }
         currentTab = selectedTab;
         event.preventDefault();
+       
     });
 
     function showBlock(e) {
