@@ -398,7 +398,7 @@ $(document).ready(function () {
         showBlock(selectedTab);
         var st = $(window).scrollTop();
         if(st>122){
-            $(window).scrollTop('170');
+            $(window).scrollTop('123');
         }
         // if (currentTab === selectedTab) {
         //     lastScrollTop = 0;
