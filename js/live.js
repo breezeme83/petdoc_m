@@ -160,11 +160,22 @@ $(function () {
 
 //clear button 
 $(function () {
-    $('.clear-input').click(function () {
-        $(this).siblings('input').val('').trigger('keyup');
-    }).siblings('input').keyup(function(){
-        $(this).siblings('.clear-input').toggle($(this).val().length > 0);
-    });
+    $('.clear-input').on('click', function () {
+        $(this).siblings('input').val('').focus();
+    }).siblings('input').focus(function(){
+        if($(this).val()) {
+            $(this).siblings('.clear-input').show();
+        }   
+    }).focusout(function(e){
+        var $input = $(this);
+        setTimeout(function() {
+            $input.siblings('.clear-input').hide();    
+        }, 100);
+    }).keyup(function(){
+        if($(this).val()) {
+            $(this).siblings('.clear-input').show();
+        }
+    })
 });
 
 //form_register_03_breed.html
