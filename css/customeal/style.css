@@ -405,7 +405,7 @@ body{margin:0; padding:0;}
 .customeal .ly-pop-con .info-box .t-b{color:#4e5263;}
 .customeal .ly-pop-con .info-box .ico-arrow{width:50px;background:url(../../img/customeal/common-ic-popup-price-arrow.svg);background-repeat:no-repeat;background-size:10px;background-position:50%;}
 /*mypet-info-box*/
-.customeal .mypet-info-box .middle-block{padding:0;}
+.customeal .mypet-info-box .middle-block{padding:48px 0 0 0;}
 .customeal .mypet-info-box .petinfolist{margin-top:12px;padding:17px 0;}
 .customeal .mypet-info-box .petinfolist li{display:table; table-layout: fixed;width:100%;font-size:15px;padding-left:21px;}
 .customeal .mypet-info-box .petinfolist li p{display:table-cell;width:40%;text-align: left;color:#4e5263;font-weight:bold;}
