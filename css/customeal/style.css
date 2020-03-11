@@ -53,6 +53,9 @@ body{margin:0; padding:0;}
 .customeal #condition .input-allergy-block b.txt-quiry-b,
 .customeal #condition .input-preference-block b.txt-quiry-b{padding:35px 0 5px 0}
 .customeal #edit_register .input-name-block{padding:30px 0 0 0;}
+.customeal .custom-file-input { color: transparent; }
+.customeal .custom-file-input::-webkit-file-upload-button { visibility: hidden; }
+.customeal .custom-file-input::before { content:'';display:block;width:24px;height:24px;position:Absolute;top:75px;left:73px;background-image:url(../../img/customeal/common-btn-add.svg);background-size:100%;cursor: pointer;}
 /*progress_status_common*/
 .customeal .progress-status{width:86.5%;height:2px;margin:6px auto 0 auto;border-radius: 3px;background:#f0f0f0;}
 .customeal #condition .progress-status,.customeal #edit_condition .progress-status{background:#f2e8df;}
